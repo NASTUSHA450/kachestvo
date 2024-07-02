@@ -1,0 +1,208 @@
+* {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #a6c9ff;
+  text-align: center; }
+
+a {
+  text-decoration: none; }
+
+h2 {
+  padding: 2.5rem 0; }
+
+.pointer {
+  cursor: pointer; }
+
+.show {
+  display: block !important; }
+
+.btn {
+  background: #ff4b4b;
+  border-radius: 25px;
+  padding: 0.9rem 1.6rem;
+  font-size: 1.5rem;
+  border: none;
+  box-shadow: 2px 5px 10px #497957; }
+
+nav {
+  background: #b47ff6;
+  padding: 4rem 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    font-weight: 700;
+    font-size: 28px;
+    margin-left: 6.188rem; }
+    nav ul li {
+      margin-right: 60px; }
+
+.slider {
+  background: #7029cb;
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 3.5rem;
+  margin-top: 2.5rem; }
+  .slider .slide {
+    width: 100%;
+    display: none;
+    padding-top: 2%; }
+    .slider .slide .slide-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%; }
+      .slider .slide .slide-content h1 {
+        margin-right: 2rem; }
+
+.blocks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 13px; }
+  .blocks .block {
+    background: #3ade4b;
+    display: flex;
+    flex-basis: 100%;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    font-size: 53px;
+    padding: 75px; }
+  .blocks.one {
+    margin-bottom: 13px; }
+    .blocks.one .block:nth-child(2) {
+      flex: 3; }
+  .blocks.two .block:nth-child(1) {
+    flex: 6; }
+
+.boxes {
+  background: #d4ff5a;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 30px;
+  padding: 1.5rem;
+  margin: 0 1.5rem; }
+  .boxes .box {
+    display: flex;
+    flex: 1;
+    background: #497957;
+    border: 2px solid #00ff4a;
+    box-shadow: 2px 5px 10px #497957;
+    border-radius: 35px;
+    margin-right: 1.5rem; }
+    .boxes .box:last-of-type {
+      margin-right: 0; }
+    .boxes .box .inner {
+      padding-bottom: 100%; }
+
+.utp {
+  margin: 2.5rem 0; }
+  .utp p {
+    font-size: 28px;
+    margin-bottom: 1rem; }
+
+.footer {
+  background: #d87ff6;
+  display: flex;
+  justify-content: space-around;
+  padding: 1.75rem 0;
+  font-size: 28px;
+  font-weight: 500px; }
+
+.modal-window {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  font-size: 30px;
+  font-weight: 600; }
+  .modal-window:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto; }
+  .modal-window > div {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: #a6c9ff;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .modal-window .modal-close {
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    padding: 8px 15px;
+    background: #497957;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 5px;
+    margin: 15px; }
+
+#open-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #a6c9ff;
+  display: none; }
+  #open-menu .menu {
+    display: flex;
+    flex-flow: column;
+    padding: 57px; }
+    #open-menu .menu a {
+      text-align: start;
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 57px; }
+      #open-menu .menu a:last-of-type {
+        margin-bottom: 0; }
+
+@media screen and (max-width: 768px) {
+  nav,
+  .slider {
+    padding: 2rem 1.5rem; }
+  nav ul {
+    margin-left: 0; }
+    nav ul li {
+      margin-right: 20px; }
+  .slider .slide {
+    padding-top: 0; }
+    .slider .slide .slide-content {
+      flex-flow: column; }
+      .slider .slide .slide-content h1 {
+        margin-right: 0;
+        padding-bottom: 0.5rem; }
+  .slider img:first-of-type {
+    margin-right: 1.5rem; }
+  .slider img:last-of-type {
+    margin-left: 1.5rem; }
+  .modal-window > div {
+    width: 250px;
+    height: 250px; }
+  #open-menu {
+    width: 375px;
+    height: 100vh; }
+    #open-menu .menu a {
+      margin-bottom: 30px; } }
